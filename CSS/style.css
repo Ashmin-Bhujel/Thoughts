@@ -1,0 +1,54 @@
+/* Google Fonts */
+/* Shadows Into Light Font */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Shadows into light", cursive;
+    color: rgb(0, 150, 255);
+}
+
+body {
+    background-color: #151525;
+    font-size: 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    overflow: hidden;
+}
+
+.container .text {
+    position: relative;
+}
+
+.text::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #151525;
+    border-left: 1px dashed rgb(0, 150, 255);
+    animation: type 4s steps(100) infinite;
+}
+
+@keyframes type {
+    40%, 60%, 80% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
